@@ -88,8 +88,41 @@ WSGI_APPLICATION = 'djangob12.wsgi.application'
 #         'PORT': '3306',
 #     }
 # }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'ENFORCE_SCHEMA': False,
+#         'NAME': 'baitap1',
+#         'CLIENT': {
+#             # mongodb://localhost:27017
+#             # mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.5
+#             # 'host': 'mongodb://localhost:27017/?retryWrites=true&serverSelectionTimeoutMS=5000&connectTimeoutMS=10000',
+#             'host': 'mongodb://localhost:27017',
+
+#         }
+#     },
+#     'cart': {
+#         "NAME": "baitap1",
+#         "ENGINE": "django.db.backends.mysql",
+#         "USER": "root",
+#         "PASSWORD": "Dungthieu1972",
+#     },
+
+# }
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'mysql': {
+         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'baitap1',
+        'USER': 'root',
+        'PASSWORD': 'Dungthieu1972',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    },
+    'mongodb': {
         'ENGINE': 'djongo',
         'ENFORCE_SCHEMA': False,
         'NAME': 'baitap1',
@@ -98,17 +131,15 @@ DATABASES = {
             # mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.5
             # 'host': 'mongodb://localhost:27017/?retryWrites=true&serverSelectionTimeoutMS=5000&connectTimeoutMS=10000',
             'host': 'mongodb://localhost:27017',
-
-        }
-    },
-    'cart': {
-        "NAME": "baitap1",
-        "ENGINE": "django.db.backends.mysql",
-        "USER": "root",
-        "PASSWORD": "Dungthieu1972",
-    },
-
+    }
+        
+    }
+    
 }
+DATABASE_ROUTERS = ["cart.dbRouter.CartDBRouter", "product.dbRouter.ProductDBRouter"]
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
