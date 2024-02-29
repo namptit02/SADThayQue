@@ -1,5 +1,4 @@
-# SADThayQue
-- Cách cài đặt mỗi app một db(App Cart Mysql, app Product MongoDB)
+# Cách cài đặt mỗi app một db(App Cart Mysql, app Product MongoDB)
 B1: Chỉnh sửa phần DATABASE trong file djangob12/settings.by như sau:
 
 DATABASES = {
