@@ -19,9 +19,6 @@ DATABASES = {
         'ENFORCE_SCHEMA': False,
         'NAME': 'baitap1',
         'CLIENT': {
-            # mongodb://localhost:27017
-            # mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.5
-            # 'host': 'mongodb://localhost:27017/?retryWrites=true&serverSelectionTimeoutMS=5000&connectTimeoutMS=10000',
             'host': 'mongodb://localhost:27017',
     }
         
