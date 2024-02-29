@@ -28,10 +28,10 @@ DATABASES = {
 
 B2: Chạy các lệnh sau để cập nhâ lại thông tin: 
 
-python manage.py makemigrations
-python manage.py migrate
-python manage.py migrate --database=mysql
-python manage.py migrate --database=mongodb
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py migrate --database=mysql
+- python manage.py migrate --database=mongodb
 
 B3: Trong app cart và product, mỗi app tạo 1 file dbRouter.py
 Ví dụ file dbRouter.py trong app Cart:
