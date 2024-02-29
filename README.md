@@ -27,6 +27,7 @@ DATABASES = {
 }
 
 B2: Chạy các lệnh sau để cập nhâ lại thông tin: 
+
 python manage.py makemigrations
 python manage.py migrate
 python manage.py migrate --database=mysql
