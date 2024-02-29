@@ -23,7 +23,7 @@ DATABASES = {
     }
         
     }
-    
+
 }
 
 B2: Chạy các lệnh sau để cập nhâ lại thông tin: 
